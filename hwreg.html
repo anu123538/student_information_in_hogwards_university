@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hogwarts Registration</title>
+    <style>
+      fieldset {
+        border: 2px solid #4b2e83;
+        padding: 20px;
+        max-width: 500px;
+        background-color: #f9f9f9;
+      }
+
+      legend {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #4b2e83;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hogwarts Registration</h2>
+    <form action="save.php" method="post" id="regForm">
+      <fieldset>
+        <legend>Student Details</legend>
+
+        <label>Student Name:</label>
+        <input type="text" name="student_name" required /><br /><br />
+
+        <label>Student ID:</label>
+        <input type="text" name="student_id" required /><br /><br />
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="witch" required />Witch
+        <input type="radio" name="gender" value="wizard" />Wizard<br /><br />
+
+        <label>Blood Category:</label>
+        <select name="blood_category">
+          <option value="Pure blood">Pure blood</option>
+          <option value="Half blood">Half blood</option>
+          <option value="Mud blood">Mud blood</option>
+        </select><br /><br />
+
+        <label>House:</label>
+        <input type="text" name="house" /><br /><br />
+
+        <button type="submit" formaction="save.php">Save</button>
+        <button type="submit" formaction="find.php">Find</button>
+        <button type="submit" formaction="update.php">Update</button>
+        <button type="submit" formaction="delete.php">Delete</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
